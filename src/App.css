@@ -1,38 +1,351 @@
-.App {
-  text-align: center;
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* Nav-Bar */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.d-flex {
+  list-style: none;
+  text-decoration: none;
+  width: 30%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.d-flex li a {
+  text-decoration: none;
+  color: aliceblue;
+  justify-content: space-between;
+  align-items: center;
+  color: rgb(179, 116, 239);
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: large;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h4 {
+  /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: rgb(179, 116, 239);
+}
+
+/* Hero - Page */
+
+.heropage {
+  background-image: linear-gradient(
+      rgba(36, 42, 46, 0.422),
+      rgba(36, 42, 46, 0.514)
+    ),
+    url("https://images.unsplash.com/photo-1534684117197-7354d9d1ac42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8dHJhdmVsJTIwYWxvbmV8ZW58MHx8MHx8fDA%3D&w=1000&q=80");
+  background-size: cover;
+  height: 100vh;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.heropage h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.heropage h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 2.5rem;
+  color: rgb(220, 210, 152);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.herobtn {
+  justify-content: center;
+  width: 100%;
+}
+
+/* Blog - Page */
+
+.blogPage {
+  background-color: #000000;
+  background-image: linear-gradient(
+    180deg,
+    #1c1b1b 0%,
+    #2e383a 52%,
+    #2e3631 90%
+  );
+  background-size: cover;
+  color: white;
+}
+
+.cardDesc {
+  transition: all 0.3s;
+}
+.cardDesign {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cardImgDiv {
+  height: 12rem;
+  width: 18rem;
+  overflow: hidden;
+}
+
+.cardImg {
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s;
+}
+
+.cardImgDiv:hover .cardImg {
+  transform: scale(1.1, 1.1);
+}
+
+.card1:hover .cardDesc {
+  transform: scale(1.05, 1.05);
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(95, 8, 119);
+}
+
+/* About - Page */
+
+.aboutPage {
+  background-color: #000000;
+  background-image: linear-gradient(
+    180deg,
+    #1c1b1b 0%,
+    #2e383a 52%,
+    #2e3631 90%
+  );
+  color: white;
+}
+
+.aboutPage h1 {
+  color: white;
+  font-size: 2.6rem;
+  /* font-weight: 500; */
+}
+
+/* User - Login - Page */
+
+.userLogin {
+  background-color: #000000;
+  background-image: linear-gradient(
+    180deg,
+    #1c1b1b 0%,
+    #2e383a 52%,
+    #2e3631 90%
+  );
+  height: 100vh;
+  color: white;
+}
+
+.userLogin h2 {
+  color: white;
+  letter-spacing: 1px;
+}
+
+.userLoginForm {
+  color: white;
+  margin-top: 50px;
+  padding: 40px;
+  background-color: rgba(250, 235, 215, 0.084);
+}
+
+/* User - Register - Page */
+
+.registerPage {
+  background-color: #000000;
+  background-image: linear-gradient(
+    180deg,
+    #1c1b1b 0%,
+    #2e383a 52%,
+    #2e3631 90%
+  );
+  height: 100vh;
+  color: white;
+}
+
+.registerPage h2 {
+  color: white;
+  letter-spacing: 1px;
+}
+
+.userRegister {
+  background-color: rgba(250, 235, 215, 0.084);
+  color: white;
+}
+
+/* User - main - Page */
+
+.userMainPage {
+  margin: 0;
+  background-color: #000000;
+  background-image: linear-gradient(
+    180deg,
+    #1c1b1b 0%,
+    #2c3233 52%,
+    #252b27 90%
+  );
+  height: 100vh;
+}
+
+.userMainPage .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.userMainPage h2 {
+  color: rgb(179, 116, 239);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.userMainPage h3 {
+  color: rgb(179, 116, 239);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.userForm {
+  color: white;
+  background-color: rgba(250, 235, 215, 0.094);
+}
+
+.userForm p {
+  color: rgb(179, 116, 239);
+  letter-spacing: 1px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.userbtn {
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Admin - Login - Page */
+
+.adminLogin {
+  background-color: #000000;
+  background-image: linear-gradient(
+    180deg,
+    #1c1b1b 0%,
+    #2e383a 52%,
+    #2e3631 90%
+  );
+  height: 100vh;
+  color: white;
+}
+
+.adminLogin h2 {
+  font-family: inherit;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.adminLoginForm {
+  color: white;
+  margin-top: 50px;
+  padding: 40px;
+  background-color: rgba(250, 235, 215, 0.084);
+}
+
+/* Admin - Main - Page */
+
+.adminMainPage {
+  color: white;
+  background-color: #000000;
+  background-image: linear-gradient(
+    180deg,
+    #1c1b1b 0%,
+    #2e383a 52%,
+    #2e3631 90%
+  );
+}
+
+.adminMainPage h2 {
+  font-family: inherit;
+  letter-spacing: 1px;
+  color: white;
+}
+.card .cards {
+  box-shadow: 0px 5px 5px -5px rgba(110, 105, 105, 0.549);
+  padding: 1rem;
+  border-radius: 3px;
+  z-index: 0;
+}
+
+.card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-head h2 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  /* color: rgb(16, 72, 240); */
+}
+
+.card-head span {
+  font-size: 1.9rem;
+  color: #777;
+}
+
+.card-progress small {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.card-indicator {
+  margin: 0.7rem 0rem;
+  height: 10px;
+  border-radius: 4px;
+  background: #e9edf2;
+  overflow: hidden;
+}
+
+.indicator {
+  height: 10px;
+  border-radius: 4px;
+}
+
+.indicator.one {
+  background: rgb(7, 164, 7);
+}
+
+.indicator.two {
+  background: rgba(224, 224, 35, 0.991);
+}
+
+.indicator.three {
+  background: #f63333;
+}
+
+.indicator.four {
+  background: #4130db;
+}
+
+.adminPage h2 {
+  font-family: inherit;
+  letter-spacing: 1px;
+  color: white;
+}
+.search {
+  display: flex;
+  justify-content: center;
 }
